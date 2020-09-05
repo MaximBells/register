@@ -1,0 +1,230 @@
+.nav-bar{
+  background: linear-gradient(to right, gray, black);
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 6%;
+
+
+}
+.zagolov{
+  font-family: monospace;
+}
+.mainForm{
+  margin-top: 5%;
+  margin: 10%;
+  margin-left: 20%;
+  margin-right:20%;
+}
+
+body {
+  background: #f3f2f3;
+  color: #000000;
+  font-family: Trebuchet MS, Arial, Times New Roman;
+  font-size: 12px;
+}
+.zagolov{
+  text-align: center;
+  font-size: 25pt;
+}
+.nameDiv{
+  float: left;
+  width: auto;
+  max-width: 90%;
+  min-width: 15%;
+}
+.surnameDiv{
+  display: block;
+  float: right;
+  width: auto;
+  max-width: 90%;
+  min-width: 15%;
+}
+.onlyFather{
+  float: left;
+  margin-top: 3%;
+}
+.datebirth{
+  margin-top: 45%;
+}
+.containter{
+  width: 45%;
+  border: solid 1px lightgray;
+  margin:3% 25% 0 25%;
+   width:50%;
+}
+TD{
+  vertical-align: top;
+  padding-right: 3px;
+}
+#col1{
+  width: 40%;
+}
+#col2{
+  width: 40%;
+}
+#col3{
+  width: 40%;
+}
+table{
+}
+.spanForLabel{
+  font-size: 13pt;
+}
+.monthSelect{
+  font-size: 11pt;
+  padding: 1.5px 8px 1.5px 0;
+}
+
+#idPhone{
+  width: 100%;
+  font-size: 11pt;
+  padding: 1.5px 8px 1.5px 0;
+}
+
+.nameAndSurnameAndFather{
+  display: -ms-inline-grid;
+}
+
+
+
+.divGroup, .sexDiv, .healerDiv, .divPhone, .smsDiv, .address, .datevidan, .submit {
+  margin-top: 15%;
+}
+.selectGroup, .healSelector{
+  width: 100%;
+  font-size: 11pt;
+  padding: 1.5px 8px 1.5px 0;
+}
+#zagolovAddress{
+  font-size: 19pt;
+}
+#zagolovError{
+  font-size: 19pt;
+  color: red;
+}
+#col1ad{
+margin-top: 5%;
+float:left;
+}
+#col2ad{
+  margin-top: 5%;
+float:right;
+}
+.Passport{
+  margin-top: 65%;
+}
+.selectType{
+  width: 100%;
+  font-size: 11pt;
+  padding: 1.5px 8px 1.5px 0;
+}
+.serianAndNumber{
+  vertical-align: top;
+}
+.kemVidanDiv{
+  display: block;
+  margin-top: 22%;
+}
+.submitButton{
+  border: solid 1px lightblue;
+  width: 65%;
+  font-size: 11pt;
+  padding: 1.5px 5% 1.5px 5%;
+  background-color: lightblue;
+  margin-top: 10%;
+  text-decoration: none;
+  color: black;
+}
+.submitButton:hover{
+  color: white;
+  border: solid 1px blue;
+  background-color: blue;
+}
+#zatemnenie {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #zatemnenieError {
+              background: rgba(102, 102, 102, 0.5);
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: none;
+            }
+      #okno {
+        width: 15%;
+        height: 85%;
+        text-align: center;
+        padding: 15px;
+        border: solid 1px lightgray;
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #f3f2f3;
+      }
+      #oknoError {
+        width: 15%;
+        height: 85%;
+        text-align: center;
+        padding: 15px;
+        border: solid 1px red;
+        color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #f3f2f3;
+      }
+      #zatemnenieError:target{display: block;}
+      #zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        border: solid 1px lightblue;
+        width: 65%;
+        font-size: 11pt;
+        padding: 1.5px 5% 1.5px 5%;
+        background-color: lightblue;
+        margin-top: 10%;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      .close:hover {
+        color: white;
+        border: solid 1px blue;
+        background-color: blue;
+      }
+      .closeError {
+        display: inline-block;
+        border: solid 1px lightpink;
+        width: 65%;
+        font-size: 11pt;
+        padding: 1.5px 5% 1.5px 5%;
+        background-color: lightpink;
+        margin-top: 10%;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+      .closeError:hover {
+        color: black;
+        border: solid 1px red;
+        background-color: red;
+      }
+      .error{
+        color: red;
+        font-size: 7pt;
+      }

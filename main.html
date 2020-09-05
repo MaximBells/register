@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Регистрация</title>
+<div class="nav-bar"></div>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+<div id="app"  @mouseover="check">
+
+
+  <div class="containter">
+<div class="mainForm">
+  <h1 class="zagolov">Создание клиента</h1>
+<div class="nameAndSurnameAndFather">
+<div class="nameAndSurname">
+  <div class="nameDiv">
+    <div class="labelName">
+      <label for="name"><span class="spanForLabel">Имя*</span></label>
+    </div>
+    <div class="nameInput">
+
+      <input type="text" name="name" required placeholder="Введите ваше имя..." v-model="name">
+
+    </div>
+  </div>
+
+  <div class="surnameDiv">
+    <div class="labelSurname">
+      <label for="surname"><span class="spanForLabel">Фамилия*</span></label>
+    </div>
+    <div class="inputSurname">
+      <input type="text" name="surname" required placeholder="Введите вашу фамилию..." v-model="surname">
+    </div>
+  </div>
+</div>
+
+<div class="onlyFather" >
+ <div class="fatherDiv">
+   <div class="labelFather">
+     <label for="father" ><span class="spanForLabel">Отчество</span></label>
+   </div>
+   <div class="inputFather">
+     <input type="text" name="father" required placeholder="Введите ваше отчество..." v-model="father">
+   </div>
+ </div>
+</div>
+</div>
+
+<div class="datebirth">
+  <div class="labelDate">
+    <label for="dateB" ><span class="spanForLabel">Дата рождения*</span></label>
+  </div>
+  <div class="inputDateB">
+    <form>
+    <input type="number" name="day" required placeholder="День..." id="optionDay" v-model="dayB">
+    <select class="monthSelect" name="month" v-model="monthB">
+      <option value="Январь">Январь</option>
+      <option value="Февраль">Февраль</option>
+      <option value="Март">Март</option>
+      <option value="Апрель">Апрель</option>
+      <option value="Май">Май</option>
+      <option value="Июнь">Июнь</option>
+      <option value="Июль">Июль</option>
+      <option value="Август">Август</option>
+      <option value="Сентябрь">Сентябрь</option>
+      <option value="Октябрь">Октябрь</option>
+      <option value="Ноябрь">Ноябрь</option>
+      <option value="Декабрь">Декабрь</option>
+    </select>
+    <input type="number" name="year" required placeholder="Год..." id="optionYear" v-model="yearB">
+  </form>
+  </div>
+</div>
+
+
+<div class="divPhone">
+  <div class="labelPhone">
+    <label for="phonenumber"><span class="spanForLabel">Номер телефона*</span></label>
+  </div>
+  <div class="inputPhone">
+    <input type="number" name="phonenumber" id="idPhone" placeholder="Введите ваш номер телефона..." v-model="phone">
+  </div>
+</div>
+
+<div class="sexDiv">
+  <div class="labelSex">
+    <label for="sex"><span class="spanForLabel">Пол</span></label>
+  </div>
+  <form>
+  <div class="inputSexMale">
+    <p><input type="radio" name="sexmale" value="мужской" id="maleChecked" v-model="male"  v-on:click="female = false">Муж.</p>
+  </div>
+  <div class="inputSexFemale">
+    <p><input type="radio" name="sexfemale" value="женский" v-model="female" v-on:click="male = false">Жен.</p>
+  </div>
+</form>
+</div>
+
+
+<div class="divGroup">
+  <div class="labelGroup">
+    <label for="group"><span class="spanForLabel">Группа клиентов*</span></label>
+  </div>
+  <div class="inputGroup">
+    <form>
+      <p><input type="radio" name="vIP" value="VIP" v-on:click="vIP = false" v-model="vIP">VIP</p>
+      <p><input type="radio" name="problem" value="Проблемные"v-on:click="problem = false" v-model="problem">Проблемные</p>
+      <p><input type="radio" name="oMS" value="ОМС" v-on:click="oMS = false" v-model="oMS">ОМС</p>
+    </form>
+  </div>
+</div>
+
+<div class="healerDiv">
+  <div class="labelHealer">
+    <label for="healer"><span class="spanForLabel">Лечащий врач</span></label>
+  </div>
+  <div class="inputHealer">
+    <form>
+      <select class="healSelector" name="healer" v-model="healer">
+        <option value="Иванов">Иванов</option>
+        <option value="Захаров">Захаров</option>
+        <option value="Чернышева">Чернышева</option>
+      </select>
+    </form>
+  </div>
+</div>
+
+<div class="smsDiv">
+  <div class="labelSms">
+    <label for="sms"><span class="spanForLabel">Не отправлять СМС</span></label>
+    <input type="checkbox" name="sms" value="нет" id="checkSMS" v-model="sMS">
+  </div>
+</div>
+
+<div class="address">
+  <h2 id="zagolovAddress">Адрес</h2>
+        <div class="indexAndCountry">
+        <div class="indexDiv" id="col1ad">
+          <div class="labelIndex">
+            <label for="index"><span class="spanForLabel">Индекс</span></label>
+          </div>
+          <div class="inputIndex">
+            <input type="number" name="index" required placeholder="Введите индекс..." v-model="index">
+          </div>
+        </div>
+
+        <div class="countryDiv" id="col2ad">
+          <div class="labelCountry">
+            <label for="country"><span class="spanForLabel">Страна</span></label>
+          </div>
+          <div class="inputCountry">
+            <input type="text" name="country" required placeholder="Введите вашу страну..." v-model="country">
+          </div>
+        </div>
+</div>
+
+
+<div class="oblastAndTown">
+        <div class="oblastDiv" id="col1ad">
+          <div class="labelOblast">
+            <label for="oblast"><span class="spanForLabel">Область</span></label>
+          </div>
+          <div class="inputOblast">
+            <input type="text" name="oblast" required placeholder="Введите вашу область..." v-model="oblast">
+          </div>
+        </div>
+
+        <div class="townDiv" id="col2ad">
+          <div class="labelTown">
+            <label for="town"><span class="spanForLabel">Город*</span></label>
+          </div>
+          <div class="inputTown">
+            <input type="text" name="town" required placeholder="Введите ваш город..." v-model="town">
+          </div>
+        </div>
+</div>
+
+<div class="sterrtAndHome">
+        <div class="streetDiv" id="col1ad">
+          <div class="labelStreet">
+            <label for="street"><span class="spanForLabel">Улица</span></label>
+          </div>
+          <div class="inputStreet">
+            <input type="text" name="street" required placeholder="Введите вашу улицу..." v-model="street">
+          </div>
+        </div>
+
+        <div class="homeDiv" id="col2ad">
+          <div class="labelHome">
+            <label for="home"><span class="spanForLabel">Дом</span></label>
+          </div>
+          <div class="inputHome">
+            <input type="number" name="home" required placeholder="Введите ваш дом..." v-model="home">
+          </div>
+        </div>
+</div>
+
+
+</div>
+
+<div class="Passport">
+  <h2 id="zagolovAddress">Паспорт</h2>
+
+<div class="typeDiv">
+  <div class="labelType">
+    <label for="type"><span class="spanForLabel">Тип документа*</span></label>
+  </div>
+  <div class="inputType">
+    <form>
+      <select class="selectType" name="type" v-model="type">
+        <option value="Паспорт">Паспорт</option>
+        <option value="Свидетельство">Свидетельство о рождении</option>
+        <option value="Водитель">Водительское удостоверение</option>
+      </select>
+    </form>
+  </div>
+</div>
+
+<div class="serianAndNumber">
+  <div class="seriaDiv" id="col1ad">
+    <div class="labelSeria">
+      <label for="seria"><span class="spanForLabel">Серия</span></label>
+    </div>
+    <div class="inputSeria">
+      <input type="number" name="seria" required placeholder="Введите серию паспорта..." v-model="seria">
+    </div>
+  </div>
+  <div class="nomerDiv" id="col2ad" >
+    <div class="labelNomer">
+      <label for="nomer"><span class="spanForLabel">Номер</span></label>
+    </div>
+    <div class="inputNomer">
+      <input type="number" name="nomer" required placeholder="Введите номер паспорта..." v-model="nomer">
+    </div>
+  </div>
+</div>
+
+<div class="kemVidanDiv">
+  <div class="labelKem">
+    <label for="kem"><span class="spanForLabel">Кем выдан</span></label>
+  </div>
+  <div class="inputKem">
+    <input type="text" name="kem" required placeholder="Введите, кем выдан..." class="selectType" v-model="kemvidan">
+  </div>
+</div>
+
+
+<div class="datevidan">
+  <div class="labelDateVidan">
+    <label for="dateV" ><span class="spanForLabel">Дата выдачи*</span></label>
+  </div>
+  <div class="inputDateV">
+    <form>
+    <input type="number" name="day" required placeholder="День..." id="optionDay" v-model="dayV">
+    <select class="monthSelect" name="month" v-model="monthV">
+      <option value="Январь">Январь</option>
+      <option value="Февраль">Февраль</option>
+      <option value="Март">Март</option>
+      <option value="Апрель">Апрель</option>
+      <option value="Май">Май</option>
+      <option value="Июнь">Июнь</option>
+      <option value="Июль">Июль</option>
+      <option value="Август">Август</option>
+      <option value="Сентябрь">Сентябрь</option>
+      <option value="Октябрь">Октябрь</option>
+      <option value="Ноябрь">Ноябрь</option>
+      <option value="Декабрь">Декабрь</option>
+    </select>
+    <input type="number" name="year" required placeholder="Год..." id="optionYear" v-model="yearV">
+  </form>
+  </div>
+</div>
+
+<div class="submit">
+  <a href="#zatemnenie" class="submitButton" v-if="right==true">Подтвердить</a>
+  <a href="#zatemnenieError" class="submitButton" v-else>Подтвердить</a>
+
+</div>
+
+<div class="star">
+  <p>* - Поле обязательно для заполенения.</p>
+</div>
+
+<div id="zatemnenie">
+     <div id="okno">
+       <h3 id="zagolovAddress"> Клиент успешно создан!</h2><br>
+        <p>{{surname}} {{name}} {{father}}</p>
+        <p>{{dayB}}.{{monthB}}.{{yearB}}</p>
+        <p>{{phone}}</p>
+        <p v-if="male">Мужчина</p>
+        <p v-else-if="female">Женщина</p>
+        <p v-if="vIP">{{vIP}}</p>
+        <p v-if="problem">{{problem}}</p>
+        <p v-if="oMS">{{oMS}}</p>
+        <p>{{healer}}</p>
+        <p v-if="sMS">Не отправлять смс</p>
+        <p>{{index}} {{country}} {{oblast}}</p>
+        <p> {{town}} {{street}} {{home}}</p>
+        <p>{{type}}</p>
+        <p>{{seria}}  {{nomer}}</p>
+        <p>{{kemvidan}}</p>
+        <p>{{dayV}}.{{monthV}}.{{yearV}}</p>
+       <a href="#" class="close">Закрыть окно</a>
+     </div>
+   </div>
+
+<div id="zatemnenieError">
+  <div id="oknoError">
+    <h3 id="zagolovError">Ошибка в создании клиента!</h2><br>
+      <p class="error" v-if="this.name == null || this.name == ''">Не заполнено имя!</p>
+      <p class="error" v-if="this.surname == null || this.surname == ''">Не заполнена фамилия!</p>
+      <p class="error" v-if="this.dayB == null || this.dayB ==''">Не заполнен день рождения!</p>
+      <p class="error" v-if="this.monthB == null || this.monthB ==''">Не заполнен месяц рождения!</p>
+      <p class="error" v-if="this.yearB == null || this.yearB ==''">Не заполнен год рождения!</p>
+      <p class="error" v-if="this.phone == null || this.phone ==''">Не заполнен номер телефона!</p>
+      <p class="error" v-if="Math.trunc(this.phone/10000000000)!=7 || Math.trunc(this.phone/100000000000)!=0">Неправильно заполнен номер телефона!</p>
+      <p class="error" v-if="this.vIP == false && this.problem == false && this.oMS == false">Не указана группа!</p>
+      <p class="error" v-if="this.town == null || this.town ==''">Не указан город!</p>
+      <p class="error" v-if="this.type == null || this.type ==''">Не указан тип документа!</p>
+      <p class="error" v-if="this.dayV == null || this.dayV ==''">Не указан день выдачи!</p>
+      <p class="error" v-if="this.monthV == null || this.monthV ==''">Не указан месяц выдачи!</p>
+      <p class="error" v-if="this.yearV == null || this.yearV ==''">Не указан год выдачи!</p>
+      <a href="#" class="closeError">Закрыть окно</a>
+  </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="scrypt.js"></script>
+</body>
+</html>
